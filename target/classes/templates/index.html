@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up Page</title>
+</head>
+<body>
+    <h1>FrontEnd-BackEnd Register A Student</h1>
+    <h2>Here you can register a new student or regard the list of already existing students</h2>
+
+    <p>Register a new student</p>
+    <form action="register" method="post">
+        <label for="id">ID:</label><br>
+        <input type="text" name="id"><br>
+
+        <label for="name">Name :</label><br>
+        <input type="text" name="name"><br>
+
+        <label for="email">Email :</label><br>
+        <input type="text" name="email"><br>
+
+        <label for="dob">DoB :</label><br>
+        <input type="date" name="dob"><br>
+
+        <label for="age">Age :</label><br>
+        <input type="password" name="age"><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <p>Used for testing</p>
+    <form action="add" method="post">
+        <label for="nr1">number1:</label><br>
+        <input type="text" name="nr1"><br>
+        <label for="nr2">number2:</label><br>
+        <input type="text" name="nr2"><br>
+        <button type="submit">Add</button>
+    </form>
+    <br>
+    <p>See the list of existing students</p>
+
+    <form action="api/v1/student" method="get">
+        <button type="submit">List of Students</button>
+    </form>
+    <br>
+
+    <p>Delete student using his id</p>
+    <form action="delete" method="post">
+        <input type="text" name="id">
+        <button type="submit">Delete student</button>
+    </form>
+    <br>
+
+    <p>Update student's email using his id</p>
+    <form action="updateEmail" method="post">
+        <label>ID</label>
+        <input type="text" name="id">
+        <label>New Email</label>
+        <input type="text" name="email">
+        <button type="submit">Update Email</button>
+    </form>
+
+
+
+</body>
+</html>
